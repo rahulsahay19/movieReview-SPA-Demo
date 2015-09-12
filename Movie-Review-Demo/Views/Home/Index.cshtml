@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    ViewBag.Module = "moviesApp";
+}
+
+
+<div class="jumbotron">
+    <h1>Getting Started With Angular JS</h1>
+    <p class="lead">Building Movie Review App in 2 Hours</p>
+    <p><a href="http://myview.rahulnivi.net" class="btn btn-primary btn-large">My View &raquo;</a></p>
+</div>
+
+@section scripts
+{
+    <script src="~/data/data.js"></script>
+    <script src="~/app/home/moviesCtrl.js"></script>
+}
+
+<div ng-view=""></div>

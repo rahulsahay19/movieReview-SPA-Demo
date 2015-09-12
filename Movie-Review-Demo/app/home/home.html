@@ -1,0 +1,24 @@
+﻿<div class="row" ng-controller="moviesCtrl">
+    <div class="col-md-12">
+        <h2>Getting Started With Angular JS</h2>
+        <p>
+            Building Movie Review App in Just 2 hours!
+        </p>
+        <div ng-repeat="m in movies">
+            <ul>
+                <li>
+                    Movie Name:- {{m.movieName}}
+                </li>
+                <li>
+                    Director Name:- {{m.directorName}}
+                </li>
+                <li>
+                    Release Year:- {{m.releaseYear}}
+                </li>
+                <li>
+                    No Of Reviews:- {{m.noOfReviews}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
