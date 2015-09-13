@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Newtonsoft.Json.Serialization;
 
 namespace Movie_Review_API
 {
@@ -14,7 +15,9 @@ namespace Movie_Review_API
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //Enable CORS
+            config.EnableCors();
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

@@ -13,16 +13,18 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
+                    <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#/" class="navbar-brand">Movie Reviews</a>
+                <a ui-sref="movies" class="navbar-brand">Movie Reviews</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#/">Movies</a></li>
-                    <li><a href="#/newMovie">New Movie</a></li>
+                    @*<li><a href="#/">Movies</a></li>
+                    <li><a href="#/newMovie">New Movie</a></li>*@
+                    <li><a ui-sref="movies">Movies</a></li>
+                    <li><a ui-sref="newMovie">New Movie</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

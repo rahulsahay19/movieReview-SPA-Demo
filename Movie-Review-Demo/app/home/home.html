@@ -1,10 +1,10 @@
-﻿<div class="row" ng-controller="moviesCtrl">
+﻿<div class="row" ng-controller="moviesCtrl as vm">
     <div class="col-md-12">
         <h2>Getting Started With Angular JS</h2>
         <p>
             Building Movie Review App in Just 2 hours!
         </p>
-        <div ng-repeat="m in movies">
+        <div ng-repeat="m in vm.movies">
             <ul>
                 <li>
                     Movie Name:- {{m.movieName}}

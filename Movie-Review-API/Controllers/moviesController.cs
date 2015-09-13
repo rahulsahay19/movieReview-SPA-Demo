@@ -4,11 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Movie_Review_API.Models;
 using ngCommerce.WEB_API.Models;
 
 namespace Movie_Review_API.Controllers
 {
+    [EnableCors("http://localhost:25322", "*", "*")]
     public class moviesController : ApiController
     {
         // GET api/movies
